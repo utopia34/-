@@ -1,0 +1,147 @@
+.about-section {
+  background-color: #ffffff;
+  padding: 80px 20px 40px 20px;
+  color: #000000;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-section h1 {
+  font-size: 56px;
+  font-weight: 800;
+  color: #1d3557;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+.about-intro {
+  max-width: 950px;
+  margin-bottom: 60px;
+}
+
+.about-intro p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+.about-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.about-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 60px;
+  align-items: start;
+}
+
+.specialization-block h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #5294e2;
+  margin-bottom: 30px;
+}
+
+.spec-lead {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+}
+
+.spec-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.spec-list li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333333;
+  position: relative;
+  padding-left: 15px;
+}
+
+.spec-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #333333;
+}
+
+.stats-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 10px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stat-number {
+  font-size: 52px;
+  font-weight: 800;
+  color: #1d3557;
+  line-height: 1;
+}
+
+.stat-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333333;
+  max-width: 400px;
+}
+
+.about-banner {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.about-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .about-details {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .about-section h1 {
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+  .stats-block {
+    gap: 30px;
+  }
+  .stat-number {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-section h1 {
+    font-size: 32px;
+  }
+  .specialization-block h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}

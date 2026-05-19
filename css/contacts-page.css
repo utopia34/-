@@ -1,0 +1,268 @@
+.contacts-section {
+    background-color: #e9eff4;
+    padding: 60px 20px 80px 20px;
+    color: #000000;
+}
+
+.contacts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.contacts-info h1 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.contacts-subtitle {
+    font-size: 18px;
+    color: #1a1a1a;
+    margin-bottom: 45px;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 55px;
+}
+
+.info-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.info-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.info-text {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #000000;
+}
+
+.info-text.uppercase {
+    text-transform: uppercase;
+}
+
+.communication-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.com-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 12px;
+}
+
+.com-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.com-link {
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.phone-link {
+    color: #000000;
+}
+
+.email-link {
+    color: var(--primary-color, #fca311);
+}
+
+.contacts-map {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contacts-map img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.contact-form-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    color: #000000;
+}
+
+.form-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-form-section h2 {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.form-subtitle {
+    font-size: 18px;
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 50px;
+}
+
+.callback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.form-group label {
+    font-size: 18px;
+    font-weight: 400;
+    width: 160px;
+    padding-top: 10px;
+    flex-shrink: 0;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group textarea {
+    flex-grow: 1;
+    border: 2px solid #5294e2;
+    border-radius: 4px;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group textarea:focus {
+    border-color: #1d3557;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-agreement {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: start;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.form-agreement input[type="checkbox"] {
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.form-agreement label {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.4;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-submit {
+    align-self: center;
+    background-color: #fca311;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #e0920f;
+}
+
+@media (max-width: 992px) {
+    .contacts-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .communication-block {
+        gap: 40px;
+    }
+    .com-link {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .communication-block {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .form-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .form-group label {
+        width: 100%;
+        padding-top: 0;
+    }
+    .contact-form-section h2 {
+        font-size: 26px;
+    }
+    .form-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contacts-info h1 {
+        font-size: 28px;
+    }
+    .contacts-subtitle {
+        font-size: 16px;
+    }
+    .com-link {
+        font-size: 24px;
+    }
+}
