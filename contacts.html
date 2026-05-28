@@ -1,160 +1,166 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты — Ремонт компьютеров и ноутбуков</title>
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/contacts-page.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="header-container">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/contacts-page.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-container">
         <div class="logo">
-          <img src="img/logo.png" alt="Логотип" />
+            <img src="img/logo.png" alt="Логотип">
         </div>
         <div class="header-right">
-          <div class="header-top">
-            <button class="btn-status" id="orderStatusBtn">
-              статус заказа
-            </button>
-            <a href="tel:+78442981904" class="header-phone"
-              >тел: 8-8442-98-19-04</a
-            >
-            <span class="header-address"
-              >адрес: Волгоград, Советская улица, 28</span
-            >
-          </div>
-          <nav class="navigation">
-            <a href="services.html">Услуги</a>
-            <a href="cases.html">Кейсы</a>
-            <a href="about.html">О нас</a>
-            <a href="contacts.html">Контакты</a>
-          </nav>
+            <div class="header-top">
+                <button class="btn-status" id="orderStatusBtn">статус заказа</button>
+                <a href="tel:+78442981904" class="header-phone">тел: 8-8442-98-19-04</a>
+                <span class="header-address">адрес: Волгоград, Советская улица, 28</span>
+            </div>
+            <nav class="navigation">
+                <a href="index.html">Главная</a>
+                <a href="services.html">Услуги</a>
+                <a href="cases.html">Кейсы</a>
+                <a href="about.html">О нас</a>
+                <a href="contacts.html" class="active">Контакты</a>
+            </nav>
         </div>
-      </div>
-    </header>
+    </div>
+</header>
 
-    <main>
-      <section class="contacts-section">
+<main>
+    <section class="contacts-section">
         <div class="contacts-container">
-          <div class="contacts-info">
-            <h1>ГДЕ МЫ НАХОДИМСЯ</h1>
-            <p class="contacts-subtitle">
-              Мы всегда на связи и готовы вернуть вашу технику к жизни!
-            </p>
+            <div class="contacts-info">
+                <h1>ГДЕ МЫ НАХОДИМСЯ</h1>
+                <p class="contacts-subtitle">Мы всегда на связи и готовы вернуть вашу технику к жизни!</p>
 
-            <div class="info-block">
-              <div class="info-item">
-                <div class="info-title">
-                  <img
-                    src="img/icon-address.png"
-                    alt="Адрес"
-                    class="info-icon"
-                  />
-                  Наш адрес:
+                <div class="info-block">
+                    <div class="info-item">
+                        <div class="info-title">
+                            <img src="img/icon-address.png" alt="Адрес" class="info-icon">
+                            Наш адрес:
+                        </div>
+                        <p class="info-text uppercase">ВОЛГОГРАД, СОВЕТСКАЯ УЛИЦА, 28</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-title">
+                            <img src="img/icon-time.png" alt="Режим работы" class="info-icon">
+                            Режим работы:
+                        </div>
+                        <p class="info-text">
+                            Понедельник – Пятница: с 8:30 до 17:30<br>
+                            Суббота – Воскресенье: выходной
+                        </p>
+                    </div>
                 </div>
-                <p class="info-text uppercase">
-                  ВОЛГОГРАД, СОВЕТСКАЯ УЛИЦА, 28
-                </p>
-              </div>
 
-              <div class="info-item">
-                <div class="info-title">
-                  <img
-                    src="img/icon-time.png"
-                    alt="Режим работы"
-                    class="info-icon"
-                  />
-                  Режим работы:
+                <div class="communication-block">
+                    <div class="com-item">
+                        <div class="com-title">
+                            <img src="img/icon-phone.png" alt="Телефон" class="com-icon">
+                            Телефон:
+                        </div>
+                        <a href="tel:+78442981904" class="com-link phone-link">8-8442-98-19-04</a>
+                    </div>
+                    <div class="com-item">
+                        <div class="com-title">
+                            <img src="img/icon-email.png" alt="Электронная почта" class="com-icon">
+                            Электронная почта:
+                        </div>
+                        <a href="mailto:otv.vol@mail.ru" class="com-link email-link">otv.vol@mail.ru</a>
+                    </div>
                 </div>
-                <p class="info-text">
-                  Понедельник – Пятница: с 8:30 до 17:30<br />Суббота –
-                  Воскресенье: выходной
-                </p>
-              </div>
             </div>
 
-            <div class="communication-block">
-              <div class="com-item">
-                <div class="com-title">
-                  <img
-                    src="img/icon-phone.png"
-                    alt="Телефон"
-                    class="com-icon"
-                  />
-                  Телефон:
-                </div>
-                <a href="tel:+78442981904" class="com-link phone-link"
-                  >8-8442-98-19-04</a
-                >
-              </div>
-
-              <div class="com-item">
-                <div class="com-title">
-                  <img
-                    src="img/icon-email.png"
-                    alt="Электронная почта"
-                    class="com-icon"
-                  />
-                  Электронная почта:
-                </div>
-                <a href="mailto:otv.vol@mail.ru" class="com-link email-link"
-                  >otv.vol@mail.ru</a
-                >
-              </div>
+            <div class="contacts-map">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A13a56d8b8b9e5f8b9e7f6d5c4b3a2f1e&source=constructor&mode=search&text=Волгоград%2C%20Советская%20улица%2C%2028"
+                    width="100%"
+                    height="400"
+                    frameborder="0"
+                    allowfullscreen="true"
+                    loading="lazy"
+                    style="border: 0; display: block;">
+                </iframe>
             </div>
-          </div>
-
-          <div class="contacts-map">
-            <img src="img/map.png" alt="Карта проезда" />
-          </div>
         </div>
-      </section>
+    </section>
 
-      <section class="contact-form-section">
+    <section class="contact-form-section">
         <div class="form-container">
             <h2>Остались вопросы или хотите вызвать мастера?</h2>
             <p class="form-subtitle">Оставьте свои контакты, и мы перезвоним вам в течение 10 минут для бесплатной консультации.</p>
-            
             <form action="#" method="POST" class="callback-form" id="contactForm">
                 <div class="form-group">
                     <label for="userName">Ваше имя:</label>
                     <input type="text" id="userName" name="name" autocomplete="name" required>
                 </div>
-
                 <div class="form-group">
                     <label for="userPhone">Ваш телефон:</label>
                     <input type="tel" id="userPhone" name="phone" autocomplete="tel" required>
                 </div>
-
                 <div class="form-group">
                     <label for="userMessage">Опишите проблему:</label>
                     <textarea id="userMessage" name="message" rows="6"></textarea>
                 </div>
-
                 <div class="form-agreement">
                     <input type="checkbox" id="agreementCheckbox" required>
                     <label for="agreementCheckbox">Нажимая кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с Политикой конфиденциальности.</label>
                 </div>
-
                 <button type="submit" class="btn-submit">Отправить заявку</button>
             </form>
         </div>
     </section>
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-logo-block">
-          <div class="footer-logo">
-            <img src="img/logo.png" alt="Логотип" />
-          </div>
-          <span class="footer-brand">ОТВ</span>
-        </div>
-        <div class="footer-copy">2026 © ООО "ОТВ"</div>
-      </div>
-    </footer>
+</main>
 
-    <script src="js/global.js"></script>
-    <script src="js/contacts.js"></script>
-  </body>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <div class="footer-logo-block">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Логотип">
+                </div>
+                <span class="footer-brand">ОТВ</span>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h4>Контакты</h4>
+            <ul class="footer-contacts">
+                <li><span>📍</span> Волгоград, Советская ул., 28</li>
+                <li><span>📞</span> <a href="tel:+78442981904">8-8442-98-19-04</a></li>
+                <li><span>✉️</span> <a href="mailto:otv.vol@mail.ru">otv.vol@mail.ru</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Разделы сайта</h4>
+            <ul class="footer-nav">
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="cases.html">Кейсы</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Режим работы</h4>
+            <ul class="footer-schedule">
+                <li>Пн–Пт: 8:30 – 17:30</li>
+                <li>Сб–Вс: выходной</li>
+            </ul>
+            <button class="btn-status" id="orderStatusBtnFooter" style="margin-top: 15px;">статус заказа</button>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2026 ООО "ОТВ"
+    </div>
+</footer>
+
+<button id="scrollTopBtn" class="scroll-top" style="display: none;" aria-label="Наверх">↑</button>
+<script src="js/global.js"></script>
+<script src="js/contacts.js"></script>
+</body>
 </html>
