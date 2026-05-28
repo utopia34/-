@@ -100,7 +100,7 @@
     width: 100%;
     border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .contacts-map img {
@@ -226,9 +226,11 @@
         grid-template-columns: 1fr;
         gap: 40px;
     }
+
     .communication-block {
         gap: 40px;
     }
+
     .com-link {
         font-size: 26px;
     }
@@ -239,17 +241,21 @@
         flex-direction: column;
         gap: 25px;
     }
+
     .form-group {
         flex-direction: column;
         gap: 8px;
     }
+
     .form-group label {
         width: 100%;
         padding-top: 0;
     }
+
     .contact-form-section h2 {
         font-size: 26px;
     }
+
     .form-subtitle {
         font-size: 16px;
     }
@@ -259,9 +265,11 @@
     .contacts-info h1 {
         font-size: 28px;
     }
+
     .contacts-subtitle {
         font-size: 16px;
     }
+
     .com-link {
         font-size: 24px;
     }
