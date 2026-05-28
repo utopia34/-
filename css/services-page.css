@@ -239,19 +239,41 @@
 }
 
 @media (max-width: 992px) {
-    .services-hero h1 { font-size: 36px; }
-    .hero-badges, .symptoms-grid, .directions-grid {
+    .services-hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-badges,
+    .symptoms-grid,
+    .directions-grid {
         grid-template-columns: 1fr;
     }
-    .symptoms-section h2, .directions-section h2, .price-section h2, .seo-section h2 {
+
+    .symptoms-section h2,
+    .directions-section h2,
+    .price-section h2,
+    .seo-section h2 {
         font-size: 28px;
         margin-bottom: 35px;
     }
 }
 
 @media (max-width: 576px) {
-    .services-hero h1 { font-size: 28px; }
-    .services-hero-lead { font-size: 16px; }
-    .direction-text h3 { font-size: 18px; }
-    .price-table th, .price-table td { padding: 12px 15px; font-size: 14px; }
+    .services-hero h1 {
+        font-size: 28px;
+    }
+
+    .services-hero-lead {
+        font-size: 16px;
+    }
+
+    .direction-text h3 {
+        font-size: 18px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
 }
