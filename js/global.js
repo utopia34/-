@@ -21,50 +21,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const statusBtn = document.getElementById('orderStatusBtn');
-
     const modalHTML = `
         <div class="status-modal-overlay" id="statusModal">
             <div class="status-modal-window">
                 <button class="status-modal-close" id="closeModalCross">&times;</button>
-
                 <div class="modal-state active" id="modalStateInput">
                     <h2>Узнать статус ремонта</h2>
                     <p class="modal-subtitle">Введите данные из вашей квитанции, чтобы проверить, на каком этапе находится ваше устройство.</p>
-
                     <form class="modal-form" id="modalStatusForm">
                         <div class="modal-group">
                             <label for="modalOrderNum">Номер квитанции (заказа):</label>
                             <input type="text" id="modalOrderNum" placeholder="" required>
                         </div>
-
                         <div class="modal-group">
                             <label for="modalPhone">Номер телефона:</label>
                             <input type="tel" id="modalPhone" placeholder="+7 (___) ___-__-__" required>
                         </div>
-
                         <button type="submit" class="modal-submit-btn">Проверить статус</button>
                     </form>
-
                     <p class="modal-hint"><strong>Где найти номер?</strong> Номер указан в правом верхнем углу квитанции.</p>
                 </div>
-
                 <div class="modal-state" id="modalStateResult">
                     <h2 id="resOrderTitle">Заказ</h2>
                     <div class="result-device-info">
                         <strong>Устройство:</strong> <span id="resDeviceName"></span>
                     </div>
-
                     <div class="status-badge" id="resStatusBadge">
                         <span class="status-icon"></span>
                         <span class="status-text"></span>
                     </div>
-
                     <div class="result-details">
                         <p><strong>Согласованная стоимость:</strong> <span id="resPrice"></span></p>
                         <p><strong>Комментарий мастера:</strong> <span id="resComment"></span></p>
                     </div>
-
                     <button class="modal-close-btn" id="closeModalBtn">Закрыть окно</button>
                 </div>
             </div>
@@ -96,49 +85,52 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const db_orders = [
-        { 
-            id: 1254, 
-            client_id: 1, 
-            device_name: 'Ноутбук ASUS VivoBook 15', 
+        {
+            id: 1254,
+            client_id: 1,
+            device_name: 'Ноутбук ASUS VivoBook 15',
             status_id: 1,
-            price: 2500, 
-            master_comment: 'Ремонт успешно завершен. Произведена замена кулера системы охлаждения, устройство протестировано.' 
+            price: 2500,
+            master_comment: 'Ремонт успешно завершен. Произведена замена кулера системы охлаждения, устройство протестировано.'
         },
-        { 
-            id: 1255, 
-            client_id: 2, 
-            device_name: 'Смартфон iPhone 13', 
+        {
+            id: 1255,
+            client_id: 2,
+            device_name: 'Смартфон iPhone 13',
             status_id: 2,
-            price: 4500, 
-            master_comment: 'Мастер производит замену оригинального дисплейного модуля. Работа будет завершена сегодня до вечера.' 
+            price: 4500,
+            master_comment: 'Мастер производит замену оригинального дисплейного модуля. Работа будет завершена сегодня до вечера.'
         },
-        { 
-            id: 1256, 
-            client_id: 3, 
-            device_name: 'Игровая приставка PlayStation 5', 
+        {
+            id: 1256,
+            client_id: 3,
+            device_name: 'Игровая приставка PlayStation 5',
             status_id: 3,
-            price: 0, 
-            master_comment: 'Устройство на рабочем столе инженера. Проверяется цепь питания материнской платы после скачка напряжения.' 
+            price: 0,
+            master_comment: 'Устройство на рабочем столе инженера. Проверяется цепь питания материнской платы после скачка напряжения.'
         },
-        { 
-            id: 1257, 
-            client_id: 1, 
-            device_name: 'Планшет iPad Air 2022', 
+        {
+            id: 1257,
+            client_id: 1,
+            device_name: 'Планшет iPad Air 2022',
             status_id: 5,
-            price: 6800, 
-            master_comment: 'Новый аккумулятор заказан со склада поставщика. Ориентировочная дата доставки детали — четверг.' 
+            price: 6800,
+            master_comment: 'Новый аккумулятор заказан со склада поставщика. Ориентировочная дата доставки детали — четверг.'
         }
     ];
 
-    if (statusBtn) {
-        statusBtn.addEventListener('click', () => {
-            stateInput.classList.add('active');
-            stateResult.classList.remove('active');
-            form.reset();
-            modal.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        });
-    }
+    const openModal = () => {
+        stateInput.classList.add('active');
+        stateResult.classList.remove('active');
+        if (form) form.reset();
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const statusBtns = document.querySelectorAll('#orderStatusBtn, #orderStatusBtnFooter');
+    statusBtns.forEach(btn => {
+        btn.addEventListener('click', openModal);
+    });
 
     function closeModal() {
         modal.classList.remove('open');
@@ -243,3 +235,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+const scrollBtn = document.getElementById('scrollTopBtn');
+
+if (scrollBtn) {
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            scrollBtn.style.display = 'flex';
+        } else {
+            scrollBtn.style.display = 'none';
+        }
+    });
+
+    scrollBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
